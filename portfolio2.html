@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Akhila Saichowdary Darapaneni | Portfolio</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			font-family: "Segoe UI", Tahoma, sans-serif;
+		}
+
+		body {
+			background: #f5f8fb;
+			color: #1f2933;
+			line-height: 1.6;
+		}
+
+		a {
+			color: #01264a;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		header {
+			background: linear-gradient(135deg, #a8dadc, #457b9d);
+			color: #0b1020;
+			padding: 2.2rem 1rem 3rem;
+		}
+
+		.container {
+			max-width: 1100px;
+			margin: 0 auto;
+			padding: 0 1rem;
+		}
+
+		.hero {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 2rem;
+		}
+
+		.hero-text {
+			flex: 1 1 260px;
+		}
+
+		.hero-text h1 {
+			font-size: 2.2rem;
+			margin-bottom: 0.4rem;
+		}
+
+		.hero-text h2 {
+			font-size: 1.1rem;
+			font-weight: 500;
+			margin-bottom: 1rem;
+		}
+
+		.hero-text p {
+			margin-bottom: 1rem;
+		}
+
+		.hero-photo {
+			flex: 0 0 260px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.hero-photo img {
+			width: 260px;
+			height: 260px;
+			object-fit: cover;
+			border-radius: 16px;
+			box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+			border: 4px solid rgba(255,255,255,0.9);
+		}
+
+		.contact {
+			margin-top: 0.7rem;
+			font-size: 0.95rem;
+		}
+
+		main {
+			margin-top: -1.8rem;
+			padding-bottom: 3rem;
+		}
+
+		.card {
+			background: #ffffff;
+			border-radius: 12px;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+			padding: 1.4rem 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		h3.section-title {
+			font-size: 1.25rem;
+			margin-bottom: 0.75rem;
+			color: #264653;
+			border-left: 4px solid #2a9d8f;
+			padding-left: 0.5rem;
+		}
+
+		.subheading {
+			font-weight: 600;
+		}
+
+		.two-col {
+			display: grid;
+			grid-template-columns: 2fr 1.1fr;
+			gap: 1.5rem;
+		}
+
+		.list-item {
+			margin-bottom: 0.45rem;
+		}
+
+		ul {
+			padding-left: 1.2rem;
+		}
+
+		.badge {
+			display: inline-block;
+			background: #e0f4ff;
+			color: #184a7d;
+			border-radius: 999px;
+			padding: 0.18rem 0.7rem;
+			font-size: 0.8rem;
+			margin: 0.12rem;
+		}
+
+		/* Button titles (projects & internships) */
+		.button-title {
+			display: inline-block;
+			padding: 0.38rem 1rem;
+			margin: 0.15rem 0 0.6rem;
+			border-radius: 999px;
+			border: none;
+			background: #2a9d8f;
+			color: #ffffff;
+			font-size: 0.9rem;
+			font-weight: 600;
+			cursor: pointer;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+			transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s ease;
+		}
+
+		.button-title:hover {
+			transform: translateY(-1px);
+			box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+			background: #38b2a6;
+		}
+
+		.button-title:active {
+			transform: translateY(0);
+			box-shadow: 0 1px 4px rgba(0,0,0,0.14);
+			background: #238476;
+		}
+
+		/* Image / certificate gallery */
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+			gap: 1rem;
+			margin-top: 0.6rem;
+		}
+
+		.gallery-item {
+			background: #f8fbff;
+			border-radius: 10px;
+			padding: 0.7rem;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+		}
+
+		.gallery-item img {
+			width: 100%;
+			border-radius: 8px;
+			display: block;
+		}
+
+		.caption {
+			font-size: 0.9rem;
+			margin-top: 0.4rem;
+			color: #43546a;
+		}
+
+		.footer {
+			text-align: center;
+			font-size: 0.85rem;
+			color: #6c7a89;
+			margin-top: 1.5rem;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		@media (max-width: 768px) {
+			.hero {
+				text-align: center;
+			}
+			.hero-text {
+				order: 2;
+			}
+			.hero-photo {
+				order: 1;
+				margin: 0 auto;
+			}
+			.two-col {
+				grid-template-columns: 1fr;
+			}
+			header {
+				padding-bottom: 2.2rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container hero">
+			<div class="hero-text">
+				<h1>Akhila Saichowdary Darapaneni</h1>
+				<h2>ECE Student | Aspiring Soft Ware Tester, Full‑Stack Developer & VLSI Engineer</h2>
+				<p>
+					A motivated and adaptable individual with a strong desire for continuous learning and a knack
+					for problem‑solving. Eager to apply my knowledge and creativity to contribute meaningfully
+					while growing into roles that add value to the organization.
+				</p>
+				<div class="contact">
+					<div>📞 <a href="tel:+919848413690">+91‑9848413690</a></div>
+					<div>✉️ <a href="mailto:darapaneniakhila588@gmail.com">darapaneniakhila588@gmail.com</a></div>
+					<div>🔗 <a href="https://www.linkedin.com/in/0620akhilasai" target="_blank">linkedin.com/in/0620akhilasai</a></div>
+				</div>
+			</div>
+			<div class="hero-photo">
+				<!-- Main profile photo -->
+				<img src="e:\ASKW\Darapaneni Akhila Sai Chowdary — Portfolio_files\WhatsApp Image 2025-10-11 at 9.17.30 AM.jpeg" alt="Akhila Saichowdary Darapaneni">
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="container two-col">
+			<section>
+				<!-- Education -->
+				<div class="card">
+					<h3 class="section-title">Education</h3>
+					<p class="subheading">B.Tech, Electronics and Communication Engineering</p>
+					<p>Ashoka Women's Engineering College, Kurnool, Andhra Pradesh (2022–2026)</p>
+					<p>CGPA: 7.0</p>
+					<br />
+					<p class="subheading">AP Board of Intermediate (MPC)</p>
+					<p>Narayana Junior College, Kurnool (2020–2022)</p>
+					<p>Percentage: 67.4%</p>
+					<br />
+					<p class="subheading">AP Board of Secondary Education</p>
+					<p>Sri Chaitanya School, Kurnool (2019–2020)</p>
+					<p>Percentage: 99.3%</p>
+				</div>
+
+				<!-- Projects -->
+				<div class="card">
+					<h3 class="section-title">Projects</h3>
+
+					<!-- Button scrolls to project images and news -->
+					<button class="button-title" onclick="document.getElementById('project-media').scrollIntoView();">
+						<a href="https://ibb.co/HpLhNtZV">Automotive Crash Prediction and Notification Technology (May 2025)</a>
+					</button>
+
+					<p><strong>Role:</strong> Team Leader</p>
+					<ul>
+						<li class="list-item">
+							Designed a sensor‑based system to estimate the planar position and orientation of vehicles
+							to predict possible collisions and reduce accidents.
+						</li>
+						<li class="list-item">
+							Explored alternatives to conventional laser‑based systems to improve detection accuracy
+							for adaptive cruise control and collision avoidance.
+						</li>
+						<li class="list-item">
+							Integrated an embedded camera system that activates on predicted impact to capture
+							information about nearby vehicles.
+						</li>
+					</ul>
+				</div>
+
+				<!-- Achievements -->
+				<div class="card">
+					<h3 class="section-title">Achievements & Awards</h3>
+					<ul>
+						<li class="list-item">
+							Completed 45‑hour training on <strong>C Programming</strong> conducted by Channel B.Tech at
+							Ashoka Women's Engineering College.
+						</li>
+						<li class="list-item">
+							Attended a one‑day workshop on <strong>Drone Technology</strong>.
+						</li>
+						<li class="list-item">
+							Won <strong>Second Prize</strong> at “AVISHKAR 2025” project expo for
+							<strong>Automotive Crash Prediction and Notification</strong>.
+						</li>
+						<li class="list-item">
+							Won <strong>Second Prize</strong> at “AVISHKAR 2025” paper presentation on
+							<strong>Smart Shoes Technology</strong>.
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<aside>
+				<!-- Skills -->
+				<div class="card">
+					<h3 class="section-title">Technical Skills</h3>
+					<p class="subheading">Programming Languages</p>
+					<div>
+						<span class="badge">C</span>
+						<span class="badge">Python</span>
+						<span class="badge">Java</span>
+					</div>
+					<br />
+					<p class="subheading">Web Technologies</p>
+					<div>
+						<span class="badge">HTML</span>
+						<span class="badge">CSS</span>
+						<span class="badge">JavaScript</span>
+					</div>
+					<br />
+					<p class="subheading">Core Skills</p>
+					<div>
+						<span class="badge">Basic VLSI</span>
+					</div>
+					<br />
+					<p class="subheading">Tools & Platforms</p>
+					<div>
+						<span class="badge">Power BI</span>
+						<span class="badge">Excel</span>
+						<span class="badge">Word</span>
+						<span class="badge">PowerPoint</span>
+						<span class="badge">AWS</span>
+						<span class="badge">Canva</span>
+						<span class="badge">VS Code</span>
+						<span class="badge">GitHub</span>
+					</div>
+				</div>
+
+				<!-- Internships -->
+				<div class="card">
+					<h3 class="section-title">Internships</h3>
+
+					<!-- Button to Full Stack certificate -->
+					<button class="button-title" onclick="document.getElementById('fullstack-cert').scrollIntoView();">
+						<a href="https://ibb.co/nMWHtzXJ">Full Stack Web Development (Online)</a>
+					</button>
+					<p>Feb 2025 – Apr 2025</p>
+					<ul>
+						<li class="list-item">
+							Improved application performance by optimizing queries and reducing API response times.
+						</li>
+						<li class="list-item">
+							Used version control for collaborative development and code reviews.
+						</li>
+						<li class="list-item">
+							Worked with HTML, CSS, JavaScript, Node.js, and SQL.
+						</li>
+					</ul>
+
+					<br />
+
+					<!-- Button to VLSI certificate -->
+					<button class="button-title" onclick="document.getElementById('vlsi-cert').scrollIntoView();">
+						<a href="https://ibb.co/s9DdSC1G">Very Large Scale Integration (VLSI) (Online)</a>
+					</button>
+					<p>Sep 2025 – Nov 2025</p>
+					<ul>
+						<li class="list-item">
+							Collaborated with design and verification teams in a project environment.
+						</li>
+						<li class="list-item">
+							Documented design processes and contributed to knowledge‑sharing sessions.
+						</li>
+						<li class="list-item">
+							Gained exposure to ASIC/FPGA design flow from specification to tape‑out.
+						</li>
+					</ul>
+				</div>
+
+				<div class="card footer">
+					<p>Open to internships and entry‑level roles in Web Development and VLSI.</p>
+				</div>
+			</aside>
+		</div>
+
+		<!-- Certificates & Project Images Section -->
+		<div class="container">
+			<div class="card" id="certificates">
+				<h3 class="section-title">Certificates & Project Gallery</h3>
+
+				<!-- Full Stack Certificate -->
+				<div id="fullstack-cert">
+					<h4 class="subheading">Full Stack Web Development – Course Completion</h4>
+					<div class="gallery">
+						<div class="gallery-item">
+							<img src="full stack webdevelopment course completion.jpg" alt="Full Stack Web Development Certificate">
+							<p class="caption">
+								Course completion certificate from Edzeeta Private Limited  
+								(01 Feb 2025 – 01 April 2025).
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<br />
+
+				<!-- VLSI Certificate -->
+				<div id="vlsi-cert">
+					<h4 class="subheading">Very Large Scale Integration (VLSI) – Internship Completion</h4>
+					<div class="gallery">
+						<div class="gallery-item">
+							<img src="VLSI intenship completion.jpg" alt="VLSI Internship Certificate">
+							<p class="caption">
+								Internship completion certificate in Very Large Scale Integration (VLSI).
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<br />
+
+				<!-- Project Media (photos & news) -->
+				<div id="project-media">
+					<h4 class="subheading">Automotive Crash Prediction and Notification – Media</h4>
+					<div class="gallery">
+						<div class="gallery-item">
+							<img src="IMG20250406124753.jpg" alt="Project demonstration at college">
+							<p class="caption">
+								Project demonstration setup at Ashoka Women's Engineering College.
+							</p>
+						</div>
+						<div class="gallery-item">
+							<img src="Screenshot_20251019_231347_WhatsApp.jpg" alt="News article featuring the project">
+							<p class="caption">
+								Newspaper coverage highlighting the project work and presentation (ABN Andhra Jyothi).
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="footer">
+				<p>&copy; <span id="year"></span> Akhila Saichowdary Darapaneni</p>
+			</div>
+		</div>
+	</main>
+
+	<script>
+		document.getElementById("year").textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
