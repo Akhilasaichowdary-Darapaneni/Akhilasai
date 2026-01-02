@@ -66,19 +66,18 @@
 		}
 
 		.hero-photo {
-			flex: 0 0 260px;
-			display: flex;
-			justify-content: center;
+           width: 250px;          
+           height: 250px;
+           border-radius: 50%;   
+           overflow: hidden;     
+           border: 5px solid #6aaecf;
 		}
+        .hero-photo img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;     
+}
 
-		.hero-photo img {
-			width: 260px;
-			height: 260px;
-			object-fit: cover;
-			border-radius: 16px;
-			box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-			border: 4px solid rgba(255,255,255,0.9);
-		}
 
 		.contact {
 			margin-top: 0.7rem;
@@ -464,5 +463,6 @@
 </body>
 
 </html>
+
 
 
